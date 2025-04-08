@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный клуб</title>
+</head>
+<body>
+
+    <header>
+        <h1>Добро пожаловать в наш книжный клуб!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>О нас</h2>
+            <p>Мы — сообщество любителей книг, которые обсуждают интересные произведения и делятся впечатлениями.</p>
+        </section>
+
+        <section>
+            <h2>Наши любимые жанры</h2>
+            <ul>
+                <li>Фантастика</li>
+                <li>Детективы</li>
+                <li>Классическая литература</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Рекомендуемые книги</h2>
+            <img src="book1.jpg" alt="1984 - Джордж Оруэлл">
+            <img src="book2.jpg" alt="Преступление и наказание - Ф.М. Достоевский">
+            <img src="book3.jpg" alt="Гарри Поттер - Дж.К. Роулинг">
+        </section>
+
+        <section>
+            <h2>Полезные ресурсы</h2>
+            <p>Узнать больше о книгах можно на <a href="https://www.goodreads.com/" target="_blank">Goodreads</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Книжный клуб | Читай больше!</p>
+    </footer>
+
+</body>
+</html>
