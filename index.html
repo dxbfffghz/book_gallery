@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookLibrary - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #515973, #515973);
+      color: white;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #0a0d11;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .theme-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: white;
+      color: #333;
+      border: 2px solid #333;
+      padding: 8px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .theme-btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    nav {
+      background-color: #1d1e1f;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    main {
+    background-color: #757d98;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+    }
+
+    footer {
+      background-color: #1d1e1f;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Светлая тема */
+    body.light {
+      background: linear-gradient(135deg, #ffffff, #dcdcdc);
+      color: #222;
+    }
+
+    body.light header {
+      background-color: #4a90e2;
+      color: #ffffff;
+    }
+
+    body.light nav {
+      background-color: #003366;
+    }
+
+    body.light main {
+      color: #003366;
+      background-color: #ffffff;
+    }
+
+    body.light footer {
+      background-color: #003366;
+      color: #ffffff;
+    }
+
+    body.light .theme-btn {
+      background-color: #333;
+      color: #fff;
+      border-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="toggle-theme" class="theme-btn">
+      <i class="fas fa-moon"></i> Toggle Theme
+    </button>
+    <h1>BookLibrary</h1>
+    <p>Your gateway to amazing book collections</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="students.html">Students</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Welcome to BookLibrary</h2>
+    <p>Explore, borrow, and enjoy books. Start your reading journey now!</p>
+  </main>
+  <body>
+    <header>
+        <h1>Interactive Book Gallery</h1>
+    </header>
+    <section id="gallery">
+        <figure>
+            <img src="https://i.pinimg.com/736x/4b/58/66/4b58667868df06995b30392343658be0.jpg" alt="image 1" />
+            <figcaption>...</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.pinimg.com/736x/a6/d7/21/a6d721f0529c95938e3bb33b26f14192.jpg" alt="image 2" />
+          <figcaption>...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://i.pinimg.com/736x/e2/af/2e/e2af2eb215c1b22e6078d778f7c1e12e.jpg" alt="image 3" />
+        <figcaption>...</figcaption>
+    </figure>
+     <!-- Повторить для других изображений -->
+    </section>
+
+  <footer>
+    <p>© 2025 BookLibrary. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+    });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
