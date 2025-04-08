@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+}
+.grid img {
+    width: 100%;
+}
+.grid {
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+}.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.thehowe.org/wp-content/uploads/2023/02/Book-Banner.jpg'); /* путь к изображению */
+    background-size: cover; /* изображение будет покрывать весь контейнер */
+    background-position: center; /* выравнивание изображения по центру */
+}
