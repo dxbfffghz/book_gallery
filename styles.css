@@ -95,30 +95,135 @@ header {
     color: #FFD700;
     transform: scale(1.1);
   }
-  .grid img {
-    width: 60%; /* например, было 100% — уменьшили */
-    max-width: 300px; /* не больше 300px */
-    height: auto; /* чтобы не растягивалась по высоте */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  body {
+    font-family: Arial, sans-serif;
   }
-  .grid {
-    background-image: url('https://www.thehowe.org/wp-content/uploads/2023/02/Book-Banner.jpg');
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .large-image {
+    width: 500px;
+    height: 500px;
+    background-color: #f0f0f0;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-  }
-  .grid img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
   }
   
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-      justify-content: center;
-      height: auto;
-    }
+  .small-images {
+    display: flex;
+    gap: 10px;
   }
   
+  .small-images img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .small-images img:focus {
+    outline: 2px solid #4a90e2;
+  }
+  
+  .small-images img:hover {
+    transform: scale(1.1);
+  }
+  /* === ОБЩИЕ НАСТРОЙКИ ДЛЯ МОБИЛЬНОЙ ВЕРСИИ (Mobile First) === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+figure {
+  margin: 0;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #ccc;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+figcaption {
+  margin-top: 10px;
+}
+
+/* === ПЛАНШЕТНАЯ ВЕРСИЯ (min-width: 772px) === */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure img {
+    border-radius: 50%;
+  }
+
+  .grid figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* === БОЛЬШИЕ ЭКРАНЫ (min-width: 992px) === */
+@media (min-width: 992px) {
+  figure img {
+    border-radius: 0;
+  }
+
+  .grid figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* === ПРЕДПОЧТЕНИЕ: УМЕНЬШЕННАЯ АНИМАЦИЯ === */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* === ПРЕДПОЧТЕНИЕ: ТЁМНАЯ ТЕМА === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffe066;
+  }
+
+  figure {
+    background-color: #333;
+    border: 2px solid black;
+    color: #ffe066;
+  }
+}
